@@ -24,6 +24,7 @@ body {
 .aula p {
     width: 91%;
     align-self: center;
+    white-space: pre-line;
 }
 
 .aula h1 {
