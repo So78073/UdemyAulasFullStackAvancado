@@ -1,4 +1,8 @@
-var dt = new Date();
+let dt = new Date();
+let cacheAula013 = [{ nome: "Pedro Lucas", sobrenome: "Soares de Assis", peso: 47.45, altura: 1.75 }]
+document.getElementById("aula013Cache").innerText = `Dados Cadastrados: ${cacheAula013.length}`;
+document.getElementById("aula014Cache").innerText = `Dados Cadastrados: ${cacheAula013.length}`;
+
 
 function aula001() {
     var nome = document.getElementById('nome').value;
@@ -103,4 +107,78 @@ function aula010() {
 
     let quest = document.getElementById('quest010');
     quest.innerHTML = "Texto destacado: " + textoDestacado + "<br><br>Índice da primeira ocorrência: " + frase.indexOf(termoBusca, iniIndexAula010);
+}
+
+function aula011() {
+    let nome = document.getElementById("aula011Nome").value;
+    let textoTrat = document.getElementById("TXTaula011");
+    if (nome.trim().length === 0) {
+        alert("Por favor adicionar um nome valido")
+
+    } else {
+        textoTrat.innerText = `
+        - Seu nome é: ${nome}\n
+        - Seu nome tem ${nome.length} letras \n
+        - A segunda letra do seu nome é: ${nome[1]}\n
+        - O primeiro índice da letra "a" no seu nome: ${nome.indexOf("a")}\n
+        - Último índice da letra "a" no seu nome: ${nome.lastIndexOf("a")}\n
+        - As últimas 3 letras do seu nome são: ${nome.slice(-3)}\n
+        - Seu nome dividido: ${nome.split(' ')}\n
+        - Seu nome em MAIÚSCULAS: ${nome.toUpperCase()}\n
+        - Seu nome em minúsculas: ${nome.toLowerCase()}\n`
+    }
+}
+
+function aula012() {
+    let numStr = document.getElementById("aula012Nome").value.trim(); // Obtém o valor e remove espaços em branco
+    let num = parseFloat(numStr); // Converte a string em número
+
+    let txt = document.getElementById("txtAula012");
+
+    if (isNaN(num)) { // Verifica se num não é um número válido
+        txt.innerText = "Por favor, insira um valor numérico válido.";
+    } else {
+        txt.innerHTML = '';
+        txt.innerHTML += `<p>Raiz Quadrada: ${Math.sqrt(num)}</p>`;
+        txt.innerHTML += `<p>${num} é inteiro: ${Number.isInteger(num)}</p>`;
+        txt.innerHTML += `<p>É um numero: ${!isNaN(num)}</p>`;
+        txt.innerHTML += `<p>Arredondado para cima: ${Math.ceil(num)}</p>`;
+        txt.innerHTML += `<p>Arredondado para baixo: ${Math.floor(num)}</p>`;
+        txt.innerHTML += `<p>2 casas Decimais : ${num.toFixed(2)}</p>`;
+
+
+    }
+}
+
+
+function aula013() {
+    const nome = document.getElementById('aula013nome').value;
+    const sobrenome = document.getElementById('aula013sobrenome').value;
+    const peso = parseFloat(document.getElementById('aula013peso').value);
+    const altura = parseFloat(document.getElementById('aula013altura').value);
+
+    if (isNaN(peso) || isNaN(altura)) {
+        alert("Coloque valores válidos no peso e altura");
+    } else {
+        let guy = {
+            nome: nome,
+            sobrenome: sobrenome,
+            peso: peso,
+            altura: altura
+        };
+        cacheAula013.push(guy);
+
+        document.getElementById("aula013Cache").innerText = `Dados Cadastrados: ${cacheAula013.length}`;
+        document.getElementById("aula014Cache").innerText = `Dados Cadastrados: ${cacheAula013.length}`;
+
+
+    }
+}
+
+function aula014() {
+    let elem = document.getElementById('aula014index').value - 1;
+    document.getElementById("txtAula014").innerText = `Nome: ${cacheAula013[elem].nome +" "+cacheAula013[elem].sobrenome}\nPeso: ${cacheAula013[elem].peso}\nAltura: ${cacheAula013[elem].altura}`
+
+
+
 }

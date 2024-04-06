@@ -65,7 +65,7 @@
     <div class="daddy">
         <div class="aula">
             <h1>Aula 5</h1>
-            <h2>Exercicio</h2>
+            <h2>Exercicio String</h2>
             <p>'Nome' tem X anos, pesa X kg e tem X altura (Mt) e seu IMC (indice de massa corporal) é de X (peso / (altura * altura))</p>
 
             <input type="checkbox" id="checkboxAula055">
@@ -95,7 +95,7 @@
     <div class="daddy">
         <div class="aula">
             <h1>Aula 7 </h1>
-            <h2>Window </h2>
+            <h2>Windows</h2>
 
             <p>Window (Janela): No contexto da programação web, "window" se refere à janela do navegador. Ela é o ambiente principal em que o conteúdo da web é exibido. A janela do navegador pode conter várias abas (tabs), cada uma exibindo um documento
                 da web diferente. <br><br>Document (Documento): O "document" é o conteúdo real que está sendo exibido em uma aba específica do navegador. É a representação do HTML (e outros recursos como CSS e JavaScript) que compõem uma página da web
@@ -106,7 +106,7 @@
 
         <div class="aula">
             <h1>Aula 8 </h1>
-            <h2>Usando a Window</h2>
+            <h2>Usando a Windows</h2>
 
             <button onclick="aula007('confirm')" class="bt">window.confirm('Your text')</button>
             <button onclick="aula007('alert')" class="bt">window.alert('Your text')</button>
@@ -121,7 +121,7 @@
     <div class="daddy">
         <div class="aula">
             <h1>Aula 9</h1>
-            <h2>Exercicio </h2>
+            <h2>Exercicio Var</h2>
 
 
             <input type="text" class="input" placeholder="Valor A" id="aula009A">
@@ -149,11 +149,67 @@
         </div>
     </div>
 
+    <div class="daddy">
+        <div class="aula">
+            <h1>Aula 11</h1>
+            <h2>Exercicio GetDatas string</h2>
+
+
+            <input type="text" class="input" placeholder="Nome completo" id="aula011Nome">
+            <button class="bt" onclick="aula011()">Send</button>
+            <p style="text-align: start;" id="TXTaula011">- Seu nome é: <br>- Seu nume tem X letras <br>- A sefunda letra do seu nome é: <br>- O primeiro indice da letra "a" no seu nome: <br>- Ultimo indice da letra "a" no seu nome: <br>- As ultimas 3 letras do seu nome são: <br>- Seu nome dividido:
+                - Seu - nome em MAIUSCULAS: <br>- Seu nome em minusculas: </p><br><br><br><br>
+
+
+
+
+        </div>
+
+        <div class="aula">
+            <h1>Aula 12</h1>
+            <h2>Exercicio Numbers</h2>
+
+            <input type="number" class="input" placeholder="Digite um numero" id="aula012Nome">
+            <button class="bt" onclick="aula012()">Send</button>
+
+            <P id="txtAula012">ANALISE DO NUMERO</P>
+        </div>
+
+
+    </div>
+
+    <div class="daddy">
+        <div class="aula">
+            <h1>Aula 13</h1>
+            <h2>Exercicio PushData Objects</h2>
+
+            <p id="aula013Cache">Dados Cadastrados: 0</p>
+            <input type="text" class="input" placeholder="Nome" id="aula013nome">
+            <input type="text" class="input" placeholder="Sobrenome" id="aula013sobrenome">
+            <input type="number" class="input" placeholder="Peso" id="aula013peso">
+            <input type="number" class="input" placeholder="Altura" id="aula013altura">
+
+            <button class="bt" onclick="aula013()">Send</button>
 
 
 
 
 
+        </div>
+
+        <div class="aula">
+            <h1>Aula 14</h1>
+            <h2>Exercicio PullData Objects</h2>
+
+            <p id="aula014Cache">Dados Cadastrados: 0</p>
+            <input type="number" class="input" placeholder="Qual index de dado você quer pegar?" id="aula014index">
+            <button class="bt" onclick="aula014()">Send</button>
+            <p id="txtAula014" style="text-align: start;"></p>
+
+        </div>
+
+
+    </div>
 
     <script src="/Z_001/main.js"></script>
 </body>
