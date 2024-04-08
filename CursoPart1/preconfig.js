@@ -1,10 +1,14 @@
+let cacheAula013 = []
+
 document.getElementById("aula013Cache").innerText = `Dados Cadastrados: ${cacheAula013.length}`;
 document.getElementById("aula014Cache").innerText = `Dados Cadastrados: ${cacheAula013.length}`;
 
+const checkboxAula005 = document.getElementById('checkboxAula05');
+const checkboxAula013 = document.getElementById('checkboxAula013');
 
 document.addEventListener('DOMContentLoaded', function() {
-    let txt = document.getElementById("txtAula012");
 
+    let txt = document.getElementById("txtAula012");
     txt.innerHTML += `<p>Raiz Quadrada: X</p>`;
     txt.innerHTML += `<p>X é inteiro:</p>`;
     txt.innerHTML += `<p>X é um numero: </p>`;
@@ -14,7 +18,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 });
 
-const checkboxAula005 = document.getElementById('checkboxAula05');
 checkboxAula005.addEventListener('change', function() {
     let nome = document.getElementById("aula005Nome");
     let idade = document.getElementById("aula005Idade");
@@ -34,9 +37,6 @@ checkboxAula005.addEventListener('change', function() {
     }
 });
 
-const checkboxAula013 = document.getElementById('checkboxAula013');
-
-
 
 checkboxAula013.addEventListener('change', function() {
     let nome = document.getElementById("aula013nome");
@@ -45,13 +45,11 @@ checkboxAula013.addEventListener('change', function() {
     let altura = document.getElementById("aula013altura");
 
 
-    const nomesPrimarios = ['Pedro', 'Lucas', 'Bruno', 'João', 'Gabriel', 'Mateus', 'Gustavo', 'Matheus', 'Rafael', 'Daniel', 'Diego', 'Vinicius', 'Felipe', 'Guilherme', 'Eduardo'];
-    const sobrenomes = ['Silva', 'Oliveira', 'Santos', 'Souza', 'Costa', 'Pereira', 'Rodrigues', 'Almeida', 'Nunes', 'Lima', 'Ferreira', 'Carvalho', 'Martins', 'Barbosa', 'Pereira'];
+    const nomesPrimarios = ['Pedro', 'Lucas', 'Bruno', 'João', 'Gabriel', 'Mateus', 'Gustavo', 'Matheus', 'Rafael', 'Daniel', 'Diego', 'Vinicius', 'Felipe', 'Guilherme', 'Eduardo', 'Duda', 'Helen'];
+    const sobrenomes = ['Silva', 'Oliveira', 'Santos', 'Souza', 'Costa', 'Pereira', 'Rodrigues', 'Almeida', 'Nunes', 'Lima', 'Ferreira', 'Carvalho', 'Martins', 'Barbosa', 'Pereira', 'Soares'];
 
-
-    const randintNome = Math.floor(Math.random() * (nomesPrimarios.length - 0 + 1)) - 1;
-    const randintSobrenome = Math.floor(Math.random() * (nomesPrimarios.length - 0 + 1)) - 1;
-
+    const randintNome = Math.floor(Math.random() * (nomesPrimarios.length - 0)) - 0;
+    const randintSobrenome = Math.floor(Math.random() * (nomesPrimarios.length - 0)) - 0;
 
     const randPeso = (Math.random() * (120 - 45) + 45).toFixed(2);
     const randAltura = (Math.random() * (2 - 1.40) + 1.40).toFixed(2);

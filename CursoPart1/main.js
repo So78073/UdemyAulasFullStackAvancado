@@ -1,6 +1,4 @@
 let dt = new Date();
-let cacheAula013 = [{ nome: "Pedro Lucas", sobrenome: "Soares de Assis", peso: 47.45, altura: 1.75 }]
-
 
 function aula001() {
     var nome = document.getElementById('nome').value;
@@ -28,9 +26,7 @@ function aula005() {
     quest.innerText = textAula05;
 }
 
-
 function aula007(type) {
-
 
     let outputAula007 = document.getElementById('outputAula007');
 
@@ -56,9 +52,7 @@ function aula007(type) {
             prompt = 'Você não colocou nada 😤 coloque algo'
         }
         outputAula007.innerText = prompt;
-
     }
-
 }
 
 function aula009() {
@@ -108,12 +102,12 @@ function aula011() {
 }
 
 function aula012() {
-    let numStr = document.getElementById("aula012Nome").value.trim(); // Obtém o valor e remove espaços em branco
-    let num = parseFloat(numStr); // Converte a string em número
+    let numStr = document.getElementById("aula012Nome").value.trim();
+    let num = parseFloat(numStr);
 
     let txt = document.getElementById("txtAula012");
 
-    if (isNaN(num)) { // Verifica se num não é um número válido
+    if (isNaN(num)) {
         txt.innerText = "Por favor, insira um valor numérico válido.";
     } else {
         txt.innerHTML = '';
@@ -124,7 +118,7 @@ function aula012() {
         txt.innerHTML += `<p>Arredondado para baixo: ${Math.floor(num)}</p>`;
         txt.innerHTML += `<p>2 casas Decimais : ${num.toFixed(2)}</p>`;
 
-
+        console.log('é dentro');
     }
 }
 
@@ -135,6 +129,9 @@ function aula013() {
     const peso = parseFloat(document.getElementById('aula013peso').value);
     const altura = parseFloat(document.getElementById('aula013altura').value);
 
+    let backLogAula13 = document.getElementById('CacheAula013Data')
+    const checkboxAula013 = document.getElementById('checkboxAula013');
+
     if (isNaN(peso) || isNaN(altura)) {
         alert("Coloque valores válidos no peso e altura");
     } else {
@@ -144,17 +141,30 @@ function aula013() {
             peso: peso,
             altura: altura
         };
+
         cacheAula013.push(guy);
+        backLogAula13.innerHTML += `<p> ID ${cacheAula013.length} - ${nome + ' ' + sobrenome}</p>`
+        checkboxAula013.checked = false;
 
         document.getElementById("aula013Cache").innerText = `Dados Cadastrados: ${cacheAula013.length}`;
         document.getElementById("aula014Cache").innerText = `Dados Cadastrados: ${cacheAula013.length}`;
 
-
     }
+
+    document.getElementById('aula013nome').value = '';
+    document.getElementById('aula013sobrenome').value = '';
+    document.getElementById('aula013peso').value = '';
+    document.getElementById('aula013altura').value = '';
+
 }
 
 function aula014() {
     let elem = document.getElementById('aula014index').value - 1;
-    document.getElementById("txtAula014").innerText = `Nome: ${cacheAula013[elem].nome +" "+cacheAula013[elem].sobrenome}\nPeso: ${cacheAula013[elem].peso}\nAltura: ${cacheAula013[elem].altura}`
+    if (cacheAula013.length == 0) {
+        alert("não há nenhum dado amarzenado, tente adicionar usando a aula 13!")
+    } else {
+        document.getElementById("txtAula014").innerText = `Nome: ${cacheAula013[elem].nome +" "+cacheAula013[elem].sobrenome}\nPeso: ${cacheAula013[elem].peso}\nAltura: ${cacheAula013[elem].altura}`
+    }
+
 
 }
