@@ -1,1 +1,2 @@
 Este repositório é focado em armazenar meu aprendizado na Udemy. Realmente, o curso é excelente. Meu objetivo é sempre aprimorar os desafios, entregando mais do que é pedido !
+![Texto alternativo](/assets/Opera%20Instantâneo_2024-04-08_134637_127.0.0.1.png)
