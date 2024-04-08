@@ -9,9 +9,9 @@
 </head>
 
 <body>
-    <h1 style="text-align: center;">Ûdemi</h1>
-    <div class="daddy">
+    <h1 style="text-align: center;"></h1>
 
+    <div class="daddy">
         <div class="aula">
             <h1>Aula 1</h1>
             <h2>console log/Exercicio</h2>
@@ -29,22 +29,22 @@
             <h1>Aula 2</h1>
             <h2>Comentarios no codigo</h2>
 
-            <p>Comentários são aquelas partes do código que são ignoradas. Eles ajudam na comunicação com outros desenvolvedores que irão implementar o mesmo. Usamos "//" para iniciar um comentário. Por exemplo: console.log('banana') // O log imprime banana.
-                Caso queira usar mais de uma linha, é só usar " /* seu texto */ ".</p>
+            <p>Comentários são partes do código que são ignoradas durante a execução. Eles são úteis para a comunicação entre desenvolvedores que trabalham no mesmo projeto.<br><br> Usamos "//" para iniciar um comentário em uma linha única.<br>Por exemplo:
+                console.log('banana') // O log imprime banana. <br><br>Para comentários de várias linhas, utilizamos "/* seu texto */". <br>Por exemplo: /* Este é um comentário de múltiplas linhas */
+            </p>
+
+
 
 
         </div>
-    </div>
-
-
-    <div class="daddy">
         <div class="aula">
             <h1>Aula 3</h1>
             <h2>Variaveis</h2>
 
             <p>Variáveis, como você já sabe, armazenam valores que acreditamos que podem mudar no futuro. Antes, usar "var nome = 'João'" estava correto, porém, atualmente, o mais adequado é utilizar <br><br>"let nome = 'João'"<br><br> A utilização do "let"
                 em vez do "var" traz benefícios como escopo de bloco, o que ajuda a evitar problemas relacionados à redeclaração de variáveis e ao escopo global. Isso torna o código mais seguro e fácil de entender, especialmente em projetos maiores e
-                mais complexos.</p>
+                mais complexos.
+            </p>
 
 
         </div>
@@ -59,16 +59,14 @@
             </p>
 
         </div>
-    </div>
 
 
-    <div class="daddy">
         <div class="aula">
             <h1>Aula 5</h1>
             <h2>Exercicio String</h2>
             <p>'Nome' tem X anos, pesa X kg e tem X altura (Mt) e seu IMC (indice de massa corporal) é de X (peso / (altura * altura))</p>
 
-            <input type="checkbox" id="checkboxAula055">
+            <input type="checkbox" id="checkboxAula05">
             <input type="text" placeholder="Nome" class="input" id="aula005Nome">
             <input type="number" placeholder="Idade" class="input" id="aula005Idade">
             <input type="number" placeholder="Peso" class="input" id="aula005Peso">
@@ -90,9 +88,7 @@
             </p>
 
         </div>
-    </div>
 
-    <div class="daddy">
         <div class="aula">
             <h1>Aula 7 </h1>
             <h2>Windows</h2>
@@ -113,12 +109,11 @@
             <button onclick="aula007('pronpt')" class="bt">window.pronpt('Your text')</button>
             <BR>
 
-            <p id="outputAula007">OUTPUT<br></p>
+            <p id="outputAula007" style="text-align: center;">OUTPUT<br></p>
+            <p style="text-align: center;">Essas ferramentas próprias do "Windows" ajudam você a obter mais informações dos usuários ou até mesmo a ter uma comunicação melhor com eles.</p>
 
         </div>
-    </div>
 
-    <div class="daddy">
         <div class="aula">
             <h1>Aula 9</h1>
             <h2>Exercicio Var</h2>
@@ -131,6 +126,8 @@
             <button class="bt" onclick="aula009()">Converter Quest</button>
 
             <p id="textAula009">var A= <br>var B= <br>var C=</p>
+
+            <p>Neste exercicio escolhemos o valor de A, B e C. o codigo no final faz o valor de <br>A = B<br>B = C<br>C = A</p>
 
 
         </div>
@@ -147,9 +144,7 @@
             <p id="quest010">Texto destacado: Teste, text, Texto, testo, Text, testando, apenas um testo de texte de index<br><br>Índice da primeira ocorrência: 0</p>
 
         </div>
-    </div>
 
-    <div class="daddy">
         <div class="aula">
             <h1>Aula 11</h1>
             <h2>Exercicio GetDatas string</h2>
@@ -157,8 +152,12 @@
 
             <input type="text" class="input" placeholder="Nome completo" id="aula011Nome">
             <button class="bt" onclick="aula011()">Send</button>
-            <p style="text-align: start;" id="TXTaula011">- Seu nome é: <br>- Seu nume tem X letras <br>- A sefunda letra do seu nome é: <br>- O primeiro indice da letra "a" no seu nome: <br>- Ultimo indice da letra "a" no seu nome: <br>- As ultimas 3 letras do seu nome são: <br>- Seu nome dividido:
-                - Seu - nome em MAIUSCULAS: <br>- Seu nome em minusculas: </p><br><br><br><br>
+            <div class="Pflex">
+
+                <p id="TXTaula011" style="text-align: start;">
+                    Seu nome é: <br><br>Seu nume tem X letras <br><br>A sefunda letra do seu nome é: <br><br>O primeiro indice da letra "a" no seu nome: <br><br>Ultimo indice da letra "a" no seu nome: <br><br>As ultimas 3 letras do seu nome são:<br><br>                    Seu nome dividido:<br><br>Seu - nome em MAIUSCULAS: <br><br>Seu nome em minusculas: </p>
+            </div>
+
 
 
 
@@ -172,18 +171,16 @@
             <input type="number" class="input" placeholder="Digite um numero" id="aula012Nome">
             <button class="bt" onclick="aula012()">Send</button>
 
-            <P id="txtAula012">ANALISE DO NUMERO</P>
+            <P id="txtAula012"></P>
         </div>
 
 
-    </div>
-
-    <div class="daddy">
         <div class="aula">
             <h1>Aula 13</h1>
             <h2>Exercicio PushData Objects</h2>
 
             <p id="aula013Cache">Dados Cadastrados: 0</p>
+            <input type="checkbox" id="checkboxAula013">
             <input type="text" class="input" placeholder="Nome" id="aula013nome">
             <input type="text" class="input" placeholder="Sobrenome" id="aula013sobrenome">
             <input type="number" class="input" placeholder="Peso" id="aula013peso">
@@ -208,10 +205,9 @@
 
         </div>
 
-
     </div>
-
     <script src="/Z_001/main.js"></script>
+    <script src="/Z_001/preconfig.js"></script>
 </body>
 
 </html>

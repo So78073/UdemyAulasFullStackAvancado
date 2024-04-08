@@ -1,63 +1,75 @@
-body {
-    display: flex;
-    margin: 50px;
-    align-content: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.daddy {
-    display: flex;
-    text-align: center;
-    justify-content: center;
-}
-
-.aula {
-    display: flex;
-    flex-direction: column;
-    background-color: rgb(240, 240, 240);
-    border-radius: 10px;
-    margin: 5px;
-    width: 350px;
-}
-
-.aula p {
-    width: 91%;
-    align-self: center;
-    white-space: pre-line;
-}
-
-.aula h1 {
-    width: 91%;
-    align-self: center;
-    margin: 0px;
-    margin-top: 10px;
-}
-
-.aula h2 {
-    width: 91%;
-    align-self: center;
-}
-
-.input {
-    height: 25px;
-    margin-top: 5px;
-    width: 90%;
-    align-self: center;
-    padding: 0px;
-    border: none;
-    text-indent: 10px;
-}
-
-.bt {
-    width: 90%;
-    height: 30px;
-    margin-top: 10px;
-    border-radius: 5px;
-    border-color: rgba(26, 26, 26, 0.253);
-    align-self: center;
-}
-
-.spanTXT {
-    color: brown;
-}
+    body {
+        display: flex;
+        margin: 0ppx;
+    }
+    
+    .daddy {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 20px;
+    }
+    
+    p {
+        text-align: center;
+    }
+    
+    .aula {
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(240, 240, 240);
+        border-radius: 10px;
+        margin: 5px;
+        width: 350px;
+        height: 500px;
+    }
+    
+    .aula p {
+        width: 91%;
+        align-self: center;
+        white-space: pre-line;
+    }
+    
+    .aula h1 {
+        width: 91%;
+        align-self: center;
+        margin: 0px;
+        margin-top: 10px;
+    }
+    
+    .aula h2 {
+        width: 91%;
+        align-self: center;
+    }
+    
+    .input {
+        height: 25px;
+        margin-top: 5px;
+        width: 90%;
+        align-self: center;
+        padding: 0px;
+        border: none;
+        text-indent: 10px;
+    }
+    
+    .bt {
+        width: 90%;
+        height: 30px;
+        margin-top: 10px;
+        border-radius: 5px;
+        border-color: rgba(26, 26, 26, 0.253);
+        align-self: center;
+    }
+    
+    .spanTXT {
+        color: brown;
+    }
+    
+    .Pflex {
+        width: 96%;
+        height: 300px;
+        overflow-y: auto;
+        padding: 10px;
+        border-radius: 5px;
+    }

@@ -1,7 +1,5 @@
 let dt = new Date();
 let cacheAula013 = [{ nome: "Pedro Lucas", sobrenome: "Soares de Assis", peso: 47.45, altura: 1.75 }]
-document.getElementById("aula013Cache").innerText = `Dados Cadastrados: ${cacheAula013.length}`;
-document.getElementById("aula014Cache").innerText = `Dados Cadastrados: ${cacheAula013.length}`;
 
 
 function aula001() {
@@ -30,26 +28,6 @@ function aula005() {
     quest.innerText = textAula05;
 }
 
-const checkbox = document.getElementById('checkboxAula055');
-checkbox.addEventListener('change', function() {
-    let nome = document.getElementById("aula005Nome");
-    let idade = document.getElementById("aula005Idade");
-    let peso = document.getElementById("aula005Peso");
-    let altura = document.getElementById("aula005Altura");
-
-    if (this.checked) {
-        nome.value = 'Pedro Soares';
-        idade.value = 21;
-        peso.value = 47.5;
-        altura.value = 1.75;
-    } else {
-        nome.value = '';
-        idade.value = '';
-        peso.value = '';
-        altura.value = '';
-    }
-});
-
 
 function aula007(type) {
 
@@ -75,7 +53,7 @@ function aula007(type) {
         let prompt = window.prompt("Digite seu testo !!");
 
         if (prompt == '') {
-            prompt = 'Você não dogotou nada 😤 pensa que me engana ?'
+            prompt = 'Você não colocou nada 😤 coloque algo'
         }
         outputAula007.innerText = prompt;
 
@@ -91,7 +69,7 @@ function aula009() {
     [A, B, C] = [B, C, A]
 
     let txt = document.getElementById('textAula009');
-    txt.innerHTML = `var A= ${A} <br>var B= ${B} <br>var C=${C} <br>`
+    txt.innerHTML = `var A= ${A} <br>var B= ${B} <br>var C= ${C} <br>`
 }
 
 function aula010() {
@@ -117,15 +95,15 @@ function aula011() {
 
     } else {
         textoTrat.innerText = `
-        - Seu nome é: ${nome}\n
-        - Seu nome tem ${nome.length} letras \n
-        - A segunda letra do seu nome é: ${nome[1]}\n
-        - O primeiro índice da letra "a" no seu nome: ${nome.indexOf("a")}\n
-        - Último índice da letra "a" no seu nome: ${nome.lastIndexOf("a")}\n
-        - As últimas 3 letras do seu nome são: ${nome.slice(-3)}\n
-        - Seu nome dividido: ${nome.split(' ')}\n
-        - Seu nome em MAIÚSCULAS: ${nome.toUpperCase()}\n
-        - Seu nome em minúsculas: ${nome.toLowerCase()}\n`
+        Seu nome é: ${nome}\n
+        Seu nome tem ${nome.length} letras \n
+        A segunda letra do seu nome é: ${nome[1]}\n
+        O primeiro índice da letra "a" no seu nome: ${nome.indexOf("a")}\n
+        Último índice da letra "a" no seu nome: ${nome.lastIndexOf("a")}\n
+        As últimas 3 letras do seu nome são: ${nome.slice(-3)}\n
+        Seu nome dividido: ${nome.split(' ')}\n
+        Seu nome em MAIÚSCULAS: ${nome.toUpperCase()}\n
+        Seu nome em minúsculas: ${nome.toLowerCase()}\n`
     }
 }
 
@@ -141,7 +119,7 @@ function aula012() {
         txt.innerHTML = '';
         txt.innerHTML += `<p>Raiz Quadrada: ${Math.sqrt(num)}</p>`;
         txt.innerHTML += `<p>${num} é inteiro: ${Number.isInteger(num)}</p>`;
-        txt.innerHTML += `<p>É um numero: ${!isNaN(num)}</p>`;
+        txt.innerHTML += `<p>${num} é um numero: ${!isNaN(num)}</p>`;
         txt.innerHTML += `<p>Arredondado para cima: ${Math.ceil(num)}</p>`;
         txt.innerHTML += `<p>Arredondado para baixo: ${Math.floor(num)}</p>`;
         txt.innerHTML += `<p>2 casas Decimais : ${num.toFixed(2)}</p>`;
@@ -178,7 +156,5 @@ function aula013() {
 function aula014() {
     let elem = document.getElementById('aula014index').value - 1;
     document.getElementById("txtAula014").innerText = `Nome: ${cacheAula013[elem].nome +" "+cacheAula013[elem].sobrenome}\nPeso: ${cacheAula013[elem].peso}\nAltura: ${cacheAula013[elem].altura}`
-
-
 
 }
