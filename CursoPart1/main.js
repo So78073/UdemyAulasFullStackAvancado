@@ -36,9 +36,9 @@ function aula007(type) {
             outputAula007.innerText = '😀🤙';
         } else {
             outputAula007.innerText = '😡👊';
-        }
+        };
 
-    }
+    };
 
     if (type == "alert") {
         alert = window.alert('Agradeço a todos que clicaram aqui !!! 😁');
@@ -49,11 +49,11 @@ function aula007(type) {
         let prompt = window.prompt("Digite seu testo !!");
 
         if (prompt == '') {
-            prompt = 'Você não colocou nada 😤 coloque algo'
+            prompt = 'Você não colocou nada 😤 coloque algo';
         }
         outputAula007.innerText = prompt;
-    }
-}
+    };
+};
 
 function aula009() {
     let A = document.getElementById('aula009A').value.toUpperCase(); // = B
@@ -64,7 +64,7 @@ function aula009() {
 
     let txt = document.getElementById('textAula009');
     txt.innerHTML = `var A= ${A} <br>var B= ${B} <br>var C= ${C} <br>`
-}
+};
 
 function aula010() {
     let frase = "Teste, text, Texto, testo, Text, testando, apenas um testo de texte de index";
@@ -73,13 +73,13 @@ function aula010() {
 
     if (isNaN(iniIndexAula010)) {
         iniIndexAula010 = 0;
-    }
+    };
 
     let textoDestacado = frase.replace(new RegExp(termoBusca, 'g'), `<span style='background-color: yellow;'>${termoBusca}</span>`);
 
     let quest = document.getElementById('quest010');
     quest.innerHTML = "Texto destacado: " + textoDestacado + "<br><br>Índice da primeira ocorrência: " + frase.indexOf(termoBusca, iniIndexAula010);
-}
+};
 
 function aula011() {
     let nome = document.getElementById("aula011Nome").value;
@@ -98,8 +98,8 @@ function aula011() {
         Seu nome dividido: ${nome.split(' ')}\n
         Seu nome em MAIÚSCULAS: ${nome.toUpperCase()}\n
         Seu nome em minúsculas: ${nome.toLowerCase()}\n`
-    }
-}
+    };
+};
 
 function aula012() {
     let numStr = document.getElementById("aula012Nome").value.trim();
@@ -129,7 +129,7 @@ function aula013() {
     const peso = parseFloat(document.getElementById('aula013peso').value);
     const altura = parseFloat(document.getElementById('aula013altura').value);
 
-    let backLogAula13 = document.getElementById('CacheAula013Data')
+    let backLogAula13 = document.getElementById('CacheAula013Data');
     const checkboxAula013 = document.getElementById('checkboxAula013');
 
     if (isNaN(peso) || isNaN(altura)) {
@@ -143,7 +143,7 @@ function aula013() {
         };
 
         cacheAula013.push(guy);
-        backLogAula13.innerHTML += `<p> ID ${cacheAula013.length} - ${nome + ' ' + sobrenome}</p>`
+        backLogAula13.innerHTML += `<p> ID ${cacheAula013.length} - ${nome + ' ' + sobrenome}</p>`;
         checkboxAula013.checked = false;
 
         document.getElementById("aula013Cache").innerText = `Dados Cadastrados: ${cacheAula013.length}`;
@@ -161,13 +161,39 @@ function aula013() {
 function aula014() {
     let elem = document.getElementById('aula014index').value - 1;
     if (cacheAula013.length == 0) {
-        alert("não há nenhum dado amarzenado, tente adicionar usando a aula 13!")
+        alert("não há nenhum dado amarzenado, tente adicionar usando a aula 13!");
     } else {
-        document.getElementById("txtAula014").innerText = `Nome: ${cacheAula013[elem].nome +" "+cacheAula013[elem].sobrenome}\nPeso: ${cacheAula013[elem].peso}\nAltura: ${cacheAula013[elem].altura}`
+        document.getElementById("txtAula014").innerText = `Nome: ${cacheAula013[elem].nome +" "+cacheAula013[elem].sobrenome}\nPeso: ${cacheAula013[elem].peso}\nAltura: ${cacheAula013[elem].altura}`;
     }
-
-}
+};
 
 function aula015() {
+    const peso = document.getElementById("inputAula015Peso").value;
+    const altura = document.getElementById("inputAula015altura").value;
+
+    const txt = document.getElementById("respAula015");
+
+    function imc(peso, altura) {
+
+        let imc = (peso / (altura ** 2)).toFixed(2);
+
+        if (imc < 18.5) {
+            return ["Abaixo do peso", imc];
+        } else if (imc >= 18.5 && imc <= 24.9) {
+            return ["Peso normal", imc];
+        } else if (imc >= 25 && imc <= 29.9) {
+            return ["Sobrepeso", imc];
+        } else if (imc >= 30 && imc <= 34.9) {
+            return ["Obesidade grau 1", imc];
+        } else if (imc >= 35 && imc <= 39.9) {
+            return ["Obesidade grau 2", imc];
+        } else if (imc >= 40) {
+            return ["Obesidade grau 3", imc];
+        }
+    };
+
+    const IMC = imc(peso, altura);
+    txt.innerText = `Seu IMC é de ${IMC[1]} -- ${IMC[0]}`
+    document.getElementById('checkboxAula015').checked = false;
 
 }

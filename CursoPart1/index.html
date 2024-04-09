@@ -67,7 +67,7 @@
             <h2>Exercicio String</h2>
             <p>'Nome' tem X anos, pesa X kg e tem X altura (Mt) e seu IMC (indice de massa corporal) é de X (peso / (altura * altura))</p>
 
-            <input type="checkbox" id="checkboxAula05">
+            <input type="checkbox" id="checkboxAula05" class="checkBox">
             <input type="text" placeholder="Nome" class="input" id="aula005Nome">
             <input type="number" placeholder="Idade" class="input" id="aula005Idade">
             <input type="number" placeholder="Peso" class="input" id="aula005Peso">
@@ -175,7 +175,7 @@
             <h2>Exercicio PushData Objects</h2>
             <div></div>
             <p id="aula013Cache">Dados Cadastrados: 0</p>
-            <input type="checkbox" id="checkboxAula013">
+            <input type="checkbox" id="checkboxAula013" class="checkBox">
             <input type="text" class="input " placeholder="Nome " id="aula013nome">
             <input type="text" class="input " placeholder="Sobrenome " id="aula013sobrenome">
             <input type="number" class="input " placeholder="Peso " id="aula013peso">
@@ -207,26 +207,29 @@
 
                 <div class="forInput">
                     <label for="">Peso</label>
-                    <input type="number" class="input">
+                    <input type="number" class="input" id="inputAula015Peso">
                 </div>
                 <div class="forInput">
                     <label for="">Altura</label>
-                    <input type="number" class="input">
+                    <input type="number" class="input" id="inputAula015altura">
                 </div>
                 <div class="forInput">
                     <button class="bt " onclick="aula015()">Calcule seu IMC</button>
+
                 </div>
-                <P class="respClass">RESPOSTA</P>
-
-
-
-
-
-
+                <input type="checkbox" id="checkboxAula015" class="checkBox">
+                <P class="respClass" id="respAula015">RESPOSTA</P>
             </div>
 
-            <div class="bigDivRight">
-
+            <div class="divSmallDefinitions">
+                <div class="smallDivLeft">
+                    <p> <b>IMC</b> </p>
+                    <p>Menos de 18,5<br><br>Entre 18,5 e 24,9<br><br>Entre 25 e 29.9<br><br>Entre 30 e 34,9<br><br>Entre 35 e 39,9<br><br>Mais do que 40</p>
+                </div>
+                <div class="smallDivRight">
+                    <p> <b>Resultado</b> </p>
+                    <p>Abaixo do peso<br><br>Peso normal<br><br>Sobrepeso<br><br>Obesidade grau 1<br><br>Obesidade grau 2<br><br>Obesidade grau 3<br><br></p>
+                </div>
             </div>
 
 

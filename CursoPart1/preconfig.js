@@ -5,6 +5,8 @@ document.getElementById("aula014Cache").innerText = `Dados Cadastrados: ${cacheA
 
 const checkboxAula005 = document.getElementById('checkboxAula05');
 const checkboxAula013 = document.getElementById('checkboxAula013');
+const checkboxAula015 = document.getElementById('checkboxAula015');
+
 
 document.addEventListener('DOMContentLoaded', function() {
 
@@ -66,4 +68,20 @@ checkboxAula013.addEventListener('change', function() {
         peso.value = '';
         altura.value = '';
     }
+});
+
+checkboxAula015.addEventListener('change', function() {
+
+    /* Um teste diferente de document (não leve em consideração a logica ^^ obg) */
+    const idpeso = 'inputAula015Peso';
+    const idAltura = "inputAula015altura";
+
+    if (this.checked) {
+        document.getElementById(idpeso).value = (Math.random() * (120 - 40) + 40).toFixed(2);
+        document.getElementById(idAltura).value = (Math.random() * (2 - 1.40) + 1.40).toFixed(2);
+    } else {
+        document.getElementById(idpeso).value = ''
+        document.getElementById(idAltura).value = ''
+    }
+
 });
