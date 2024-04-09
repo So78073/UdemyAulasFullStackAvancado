@@ -166,5 +166,8 @@ function aula014() {
         document.getElementById("txtAula014").innerText = `Nome: ${cacheAula013[elem].nome +" "+cacheAula013[elem].sobrenome}\nPeso: ${cacheAula013[elem].peso}\nAltura: ${cacheAula013[elem].altura}`
     }
 
+}
+
+function aula015() {
 
 }
