@@ -127,10 +127,12 @@
     
     .respClass {
         margin-left: 20px;
+        margin-top: 20px;
     }
     
     .checkBox {
         margin: 0px;
         padding: 0px;
         align-self: center;
+        margin-right: 10px;
     }

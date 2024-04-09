@@ -77,7 +77,7 @@ checkboxAula015.addEventListener('change', function() {
     const idAltura = "inputAula015altura";
 
     if (this.checked) {
-        document.getElementById(idpeso).value = (Math.random() * (120 - 40) + 40).toFixed(2);
+        document.getElementById(idpeso).value = (Math.random() * (100 - 40) + 40).toFixed(2);
         document.getElementById(idAltura).value = (Math.random() * (2 - 1.40) + 1.40).toFixed(2);
     } else {
         document.getElementById(idpeso).value = ''

@@ -176,24 +176,34 @@ function aula015() {
     function imc(peso, altura) {
 
         let imc = (peso / (altura ** 2)).toFixed(2);
+        let cache = null
 
-        if (imc < 18.5) {
-            return ["Abaixo do peso", imc];
-        } else if (imc >= 18.5 && imc <= 24.9) {
-            return ["Peso normal", imc];
-        } else if (imc >= 25 && imc <= 29.9) {
-            return ["Sobrepeso", imc];
-        } else if (imc >= 30 && imc <= 34.9) {
-            return ["Obesidade grau 1", imc];
-        } else if (imc >= 35 && imc <= 39.9) {
-            return ["Obesidade grau 2", imc];
-        } else if (imc >= 40) {
-            return ["Obesidade grau 3", imc];
+        if (peso < 30 || peso > 260 || altura < 1.50 || altura > 2.5) {
+            txt.style.color = 'red'
+            return 'Isso realmente é um ser humano ? 🤡'
+
+        } else {
+            if (imc < 18.5) {
+                cache[0] = 'Abaixo do peso'
+            } else if (imc >= 18.5 && imc <= 24.9) {
+                cache = "Peso normal"
+            } else if (imc >= 25 && imc <= 29.9) {
+                cache = "Sobrepeso"
+            } else if (imc >= 30 && imc <= 34.9) {
+                cache = "Obesidade grau 1"
+            } else if (imc >= 35 && imc <= 39.9) {
+                cache = "Obesidade grau 2"
+            } else if (imc >= 40) {
+                cache = "Obesidade grau 3"
+            }
+            txt.style.color = 'green'
+            return `Seu IMC é ${imc} - ${cache}`
         }
+
     };
 
     const IMC = imc(peso, altura);
-    txt.innerText = `Seu IMC é de ${IMC[1]} -- ${IMC[0]}`
+    txt.innerText = IMC
     document.getElementById('checkboxAula015').checked = false;
 
 }
