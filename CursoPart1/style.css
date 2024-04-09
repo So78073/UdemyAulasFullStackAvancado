@@ -22,52 +22,33 @@
         height: 500px;
     }
     
-    .aula2 {
+    .DefinitionDivAula001 {
         display: flex;
-        background-color: rgb(240, 240, 240);
         border-radius: 10px;
         margin: 5px;
-        width: 710px;
-        height: 400px;
-    }
-    
-    .bigDivLeft {
-        display: flex;
-        width: 100%;
-        height: 100%;
-        border-radius: 10px;
-        flex-direction: column;
-    }
-    
-    .bigDivRight {
-        display: flex;
-        width: 100%;
-        height: 100%;
-        border-radius: 10px;
-        flex-direction: column;
+        width: 350px;
+        height: 500px;
     }
     
     .divSmallDefinitions {
         display: flex;
-        background-color: rgb(240, 240, 240);
         border-radius: 10px;
         margin: 5px;
         width: 710px;
-        height: 400px;
     }
     
     .smallDivLeft {
         display: flex;
         width: 100%;
-        height: 100%;
         border-radius: 10px;
+        height: 150px;
         flex-direction: column;
     }
     
     .smallDivRight {
         display: flex;
         width: 100%;
-        height: 100%;
+        height: 150px;
         border-radius: 10px;
         flex-direction: column;
     }
