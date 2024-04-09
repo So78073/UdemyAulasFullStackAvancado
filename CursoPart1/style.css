@@ -4,21 +4,12 @@
         flex-direction: column;
     }
     
-    .imgUdemy {
-        width: 25%;
-        align-self: center;
-    }
-    
     .daddy {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         align-items: flex-start;
         padding: 20px;
-    }
-    
-    p {
-        text-align: start;
     }
     
     .aula {
@@ -31,26 +22,18 @@
         height: 500px;
     }
     
-    .aula p {
-        width: 91%;
-        align-self: center;
-        white-space: pre-line;
-    }
-    
-    .aula h1 {
-        width: 91%;
-        align-self: center;
-        margin: 0px;
-        margin-top: 10px;
-    }
-    
-    .aula h2 {
-        width: 91%;
-        align-self: center;
+    .aula2 {
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(240, 240, 240);
+        border-radius: 10px;
+        margin: 5px;
+        width: 710px;
+        height: 500px;
     }
     
     .input {
-        height: 25px;
+        min-height: 25px;
         margin-top: 5px;
         width: 90%;
         align-self: center;
@@ -68,15 +51,40 @@
         align-self: center;
     }
     
-    .spanTXT {
-        color: brown;
-    }
-    
     .Pflex {
-        width: 96%;
-        height: 300px;
+        width: 80%;
+        height: 100%;
         overflow-y: auto;
         padding: 10px;
         border-radius: 5px;
         text-align: start;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        align-self: center;
+        margin-bottom: 20px;
+        border-radius: 10px;
+    }
+    
+    .imgUdemy {
+        width: 25%;
+        align-self: center;
+    }
+    
+    p {
+        text-align: start;
+        width: 91%;
+        white-space: pre-line;
+        padding-left: 15px;
+    }
+    
+    h1 {
+        width: 91%;
+        align-self: center;
+        margin: 0px;
+        margin-top: 10px;
+    }
+    
+    h2 {
+        width: 91%;
+        align-self: center;
     }
