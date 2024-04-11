@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
     txt.innerHTML += `<p>Arredondado para baixo: X</p>`;
     txt.innerHTML += `<p>2 casas Decimais X.xx:</p>`;
 
+
 });
 
 checkboxAula005.addEventListener('change', function() {

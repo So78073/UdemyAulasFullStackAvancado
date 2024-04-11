@@ -10,7 +10,10 @@
 
 <body>
 
+
     <img src="/assets/Udemy_logo.svg.png" class="imgUdemy" alt="Imagem udemy">
+    <button class="bt" style="margin-top: 25px;" onclick="testBackLog()">test button</button>
+
 
 
     <section class="daddy">
@@ -201,6 +204,28 @@
         </div>
 
         <div class="aula">
+            <h1>Aula 15</h1>
+            <h2>Exercicio </h2>
+
+            <div class="forInput">
+                <label for="">Peso</label>
+                <input type="number" class="input" id="inputAula015Peso">
+            </div>
+
+            <div class="forInput">
+                <label for="">Altura</label>
+                <input type="number" class="input" id="inputAula015altura">
+            </div>
+
+            <div class="forInput">
+                <button class="bt " onclick="aula015()">Calcule seu IMC</button>
+
+            </div>
+            <input type="checkbox" id="checkboxAula015" class="checkBox">
+            <P class="respClass" id="respAula015">RESPOSTA</P>
+        </div>
+
+        <div class="aula">
             <h1>Tabela</h1>
             <div class="DefinitionDivAula001">
                 <div class="divSmallDefinitions">
@@ -215,39 +240,37 @@
                 </div>
             </div>
             <div class="DefinitionDivAula001">
-                <p style="margin-top: 100px;"><b>Tabela de IMC do exercicio 015<b></p>
+                <p style="margin-top: 100px;"><b>Tabela de IMC do exercicio 015</b></p>
             </div>
         </div>
 
         <div class="aula">
-            <<h1>Aula 15</h1>
-                <h2>Exercicio </h2>
+            <h1>Aula 16</h1>
+            <h2>Operadores ternarios</h2>
 
-                <div class="forInput">
-                    <label for="">Peso</label>
-                    <input type="number" class="input" id="inputAula015Peso">
-                </div>
-                <div class="forInput">
-                    <label for="">Altura</label>
-                    <input type="number" class="input" id="inputAula015altura">
-                </div>
-                <div class="forInput">
-                    <button class="bt " onclick="aula015()">Calcule seu IMC</button>
+            <p>Operadores ternários são usados quando sua função tem apenas um if e um else, usando "?" e ":". <br><br><b>const isVip = points >= 1000 ? "is vip" : "is not vip".</b><br><br> No exemplo acima, criamos uma variável e, se ela não for verdadeira
+                na checagem, ela simplesmente retorna o outro valor, que neste caso é "is not vip".</p>
+        </div>
 
-                </div>
-                <input type="checkbox" id="checkboxAula015" class="checkBox">
-                <P class="respClass" id="respAula015">RESPOSTA</P>
+        <div class="aula">
+            <h1>Aula 17</h1>
+            <h2>Only Date ( ) !</h2>
+            <p style="text-align: center; margin-right: 25px;" id="DataTimeAula016"></p>
+            <button class="bt" onclick="aula016()">Atualizar</button>
+            <p style="margin-top: 70px;">Este exercício traz uma função que utiliza o switch, porém encontrei uma maneira 1001% mais eficaz e a apliquei aos meses do ano. Vale a pena dar uma olhada.</p>
         </div>
 
 
 
 
 
-        </div>
 
-        <script src="/CursoPart1/main.js"></script>
-        <script src="/CursoPart1/preconfig.js"></script>
     </section>
+
+    <script src="/CursoPart1/main.js"></script>
+    <script src="/CursoPart1/preconfig.js"></script>
+    <script src="/CursoPart1/mainTestScript.js"></script>
+
 
 </body>
 

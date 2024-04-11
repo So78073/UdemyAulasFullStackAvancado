@@ -1,12 +1,16 @@
-let dt = new Date();
+document.addEventListener('DOMContentLoaded', function() {
+    aula016()
+
+});
 
 function aula001() {
+    let data = new Date();
     var nome = document.getElementById('nome').value;
     nome = nome.toUpperCase()
     var quest = document.getElementById('quest001');
 
 
-    let textAula01 = `Olé, meu nome é ${nome} e estou aprendendo JS às ${dt.getHours()}:${dt.getMinutes()} da manhã`
+    let textAula01 = `Olé, meu nome é ${nome} e estou aprendendo JS às ${data.getHours()}:${data.getMinutes()} da manhã`
 
     quest.innerText = textAula01
     console.log(typeof(1 + '20'), "(1 + '20'): ", 1 + '20');
@@ -21,7 +25,7 @@ function aula005() {
     let IMC = (peso / (altura * altura)).toFixed(2);
 
     let quest = document.getElementById('aula005');
-    let textAula05 = `${nome} tem ${idade} anos, pesa ${peso} kg e tem ${altura} altura  e seu IMC é de ${IMC} e sua data de nascimento é ${dt.getFullYear() - idade}`;
+    let textAula05 = `${nome} tem ${idade} anos, pesa ${peso} kg e tem ${altura} altura  e seu IMC é de ${IMC} e sua data de nascimento é ${data.getFullYear() - idade}`;
 
     quest.innerText = textAula05;
 }
@@ -205,5 +209,41 @@ function aula015() {
     const IMC = imc(peso, altura);
     txt.innerText = IMC
     document.getElementById('checkboxAula015').checked = false;
+
+}
+
+function aula016() {
+
+    let data = new Date();
+    const monthsOfYear = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'];
+    const month = monthsOfYear[data.getMonth()]
+
+
+    let day = ''
+    switch (data.getDay()) {
+        case 0:
+            day = 'Domingo';
+            break;
+        case 1:
+            day = 'Segunda-feira';
+            break;
+        case 2:
+            day = 'Terça-feira';
+            break;
+        case 3:
+            day = 'Quarta-feira';
+            break;
+        case 4:
+            day = 'Quinta-feira';
+            break;
+        case 5:
+            day = 'Sexta-feira';
+            break;
+        case 6:
+            day = 'Sabado';
+            break;
+    }
+    const str = `${day}, ${data.getDate()} ${month} de ${data.getFullYear()} - ${data.getHours() + ":" + data.getMinutes() + ":" + data.getSeconds()}`
+    document.getElementById('DataTimeAula016').innerText = str
 
 }
