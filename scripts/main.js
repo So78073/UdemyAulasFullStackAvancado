@@ -247,3 +247,96 @@ function aula016() {
     document.getElementById('DataTimeAula016').innerText = str
 
 }
+
+function aula019(mtd) {
+    if (mtd == 'del') {
+        document.getElementById('quesAula019').innerHTML = '';
+    } else if (mtd == 'add') {
+
+        const elem = [{ type: 'p', txt: 'Paragrafo' }, { type: 'div', txt: 'Texto dentro da div' }, { type: 'footer', txt: 'Texto dentro do footer' }, { type: 'section', txt: 'Texto dentro da section' }]
+        document.getElementById('quesAula019').innerHTML = ''
+        for (let i = 0; i < elem.length; i++) {
+            let { type, txt } = elem[1]
+            document.getElementById('quesAula019').innerHTML += `<${type}>${txt}</${type}>`;
+        }
+    }
+}
+
+function aula020(type) {
+    const divDaddy020 = document.querySelector(".ParagrafosAula020");
+    const pr = divDaddy020.querySelectorAll('p');
+    const bodyColor = getComputedStyle(document.body).backgroundColor;
+
+    if (type === 'quest') {
+        for (p of pr) {
+            p.style.backgroundColor = `${bodyColor}`
+        }
+    } else if (type === 'cls') {
+        for (p of pr) {
+            p.style.backgroundColor = `rgba(0,0,0,0)`
+            p.style.color = 'black'
+        }
+    } else if (type === 'youColor') {
+        for (p of pr) {
+            p.style.backgroundColor = `${document.getElementById('colorAula020_1').value}`
+            p.style.color = `${document.getElementById('colorAula020_2').value}`
+        }
+    }
+}
+
+function aula021(opc) {
+    const num1Input = document.getElementById("wightAula021");
+    const num2Input = document.getElementById("heightAula021");
+
+
+    const width = parseInt(num1Input.value);
+    const height = parseInt(num2Input.value);
+
+
+
+    if (isNaN(width) || isNaN(height)) {
+        alert("coloque valores validos, por gentileza!")
+    } else {
+        const result = (width > height) ? 'paisagem' : 'Retrato'
+        document.getElementById("questAula021").innerText = `w = ${width} h = ${height} == ${result}`
+    }
+}
+
+function aula022(mt) {
+    if (mt == 'youN') {
+        const num = document.getElementById('inputAula022').value
+        let stt = []
+        if (num.trim().length === 0) {
+            alert("O Espaço esta vazio, preencha com algo.")
+        } else {
+
+            if (isNaN(num)) {
+                console.log(num);
+
+            } else {
+                const Fizz = (num % 3) === 0 ? 'Fizz' : ''
+                const Buzz = (num % 5) === 0 ? 'Buzz' : ''
+                document.getElementById("questAula022_1").innerText = `${Fizz + Buzz}`
+            }
+        }
+    } else if (mt == 'range') {
+
+        let Fizz = []
+        let Buzz = []
+        let FizzBuzz = []
+
+        for (let n = 0; n < 20; n++) {
+            const rNum = Math.floor(Math.random() * (20 - 0) + 0);
+            if (rNum % 3 === 0) {
+                Fizz.push(rNum)
+            }
+            if (rNum % 5 === 0) {
+                Buzz.push(rNum)
+            }
+            if (rNum % 5 === 0 && rNum % 3 === 0) {
+                FizzBuzz.push(rNum)
+            }
+        }
+        document.getElementById("questAula022_2").innerText = `Fizz: (/3) = ${Fizz.length} -- ${Fizz}\nBuzz: (/5) = ${Buzz.length} -- ${Buzz}\nFizzBuzz = ${FizzBuzz.length} -- ${FizzBuzz}\n`
+    }
+}

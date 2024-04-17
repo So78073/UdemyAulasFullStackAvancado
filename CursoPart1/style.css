@@ -1,142 +1,166 @@
-    body {
-        display: flex;
-        margin: 0ppx;
-        flex-direction: column;
-    }
-    
-    .daddy {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: flex-start;
-        padding: 20px;
-    }
-    
-    .aula {
-        display: flex;
-        flex-direction: column;
-        background-color: rgb(240, 240, 240);
-        border-radius: 10px;
-        margin: 5px;
-        width: 350px;
-        height: 500px;
-    }
-    
-    .aula:hover {
-        scale: 1.01;
-    }
-    
-    .DefinitionDivAula001 {
-        display: flex;
-        border-radius: 10px;
-        margin: 5px;
-        width: 300px;
-        height: 500px;
-    }
-    
-    .divSmallDefinitions {
-        display: flex;
-        border-radius: 10px;
-        margin: 5px;
-        width: 710px;
-    }
-    
-    .smallDivLeft {
-        display: flex;
-        width: 100%;
-        border-radius: 10px;
-        height: 150px;
-        flex-direction: column;
-    }
-    
-    .smallDivRight {
-        display: flex;
-        width: 100%;
-        height: 150px;
-        border-radius: 10px;
-        flex-direction: column;
-    }
-    
-    .input {
-        min-height: 25px;
-        margin-top: 5px;
-        width: 90%;
-        align-self: center;
-        padding: 0px;
-        border: none;
-        text-indent: 10px;
-    }
-    
-    .bt {
-        width: 90%;
-        height: 30px;
-        margin-top: 10px;
-        border-radius: 5px;
-        border-color: rgba(26, 26, 26, 0.253);
-        align-self: center;
-    }
-    
-    .Pflex {
-        width: 80%;
-        height: 100%;
-        overflow-y: auto;
-        padding: 10px;
-        border-radius: 5px;
-        text-align: start;
-        margin-top: 5px;
-        border: 1px solid #ccc;
-        align-self: center;
-        margin-bottom: 20px;
-        border-radius: 10px;
-    }
-    
-    .imgUdemy {
-        width: 25%;
-        align-self: center;
-    }
-    
-    p {
-        text-align: start;
-        width: 91%;
-        white-space: pre-line;
-        margin-left: 15px;
-    }
-    
-    h1 {
-        width: 91%;
-        align-self: center;
-        margin: 0px;
-        margin-top: 10px;
-    }
-    
-    h2 {
-        width: 91%;
-        align-self: center;
-    }
-    
-    .forInput {
-        display: flex;
-        flex-direction: column;
-        margin-left: 15px;
-        padding: 5px;
-    }
-    
-    .forInput input {
-        align-self: flex-start;
-    }
-    
-    .forInput button {
-        align-self: flex-start;
-    }
-    
-    .respClass {
-        margin-left: 20px;
-        margin-top: 20px;
-    }
-    
-    .checkBox {
-        margin: 0px;
-        padding: 0px;
-        align-self: center;
-        margin-right: 10px;
-    }
+body {
+    display: flex;
+    margin: 0;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    background-color: white;
+}
+
+.daddy {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.aula {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(240, 240, 240);
+    border-radius: 10px;
+    margin: 5px;
+    width: 350px;
+    height: 500px;
+    transition: transform 0.3s ease;
+}
+
+.aula:hover {
+    transform: scale(1.02);
+}
+
+.DefinitionDivAula001 {
+    display: flex;
+    border-radius: 10px;
+    margin: 5px;
+    width: 300px;
+    height: 500px;
+}
+
+.divSmallDefinitions {
+    display: flex;
+    border-radius: 10px;
+    margin: 5px;
+    width: 710px;
+}
+
+.smallDivLeft,
+.smallDivRight {
+    display: flex;
+    width: 100%;
+    border-radius: 10px;
+    height: 150px;
+    flex-direction: column;
+}
+
+.input {
+    min-height: 25px;
+    margin-top: 5px;
+    width: 85%;
+    align-self: center;
+    padding: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.input:focus {
+    border-color: rgba(0, 0, 0, 0.5);
+}
+
+.bt,
+.btTest {
+    width: 90%;
+    height: 40px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px solid rgba(26, 26, 26, 0.253);
+    align-self: center;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.bt:hover,
+.btTest:hover {
+    background-color: rgba(26, 26, 26, 0.1);
+    color: rgba(26, 26, 26, 0.9);
+}
+
+.Pflex {
+    width: 90%;
+    height: 100%;
+    overflow-y: auto;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: start;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    align-self: center;
+    margin-bottom: 20px;
+    scrollbar-width: none;
+}
+
+.Pflex::-webkit-scrollbar {
+    display: none;
+}
+
+.HbuttonCfg {
+    display: flex;
+    width: 90%;
+    align-self: center;
+}
+
+.imgUdemy {
+    width: 25%;
+    align-self: center;
+}
+
+p {
+    text-align: start;
+    width: 95%;
+    white-space: pre-line;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+h1,
+h2 {
+    width: 95%;
+    align-self: center;
+    margin: 0;
+    margin-top: 10px;
+}
+
+.forInput {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    padding: 5px;
+}
+
+.forInput input,
+.forInput button {
+    align-self: flex-start;
+}
+
+.respClass {
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.checkBox {
+    margin: 0;
+    padding: 0;
+    align-self: center;
+    margin-right: 10px;
+}
+
+.GetColor {
+    width: 90%;
+    align-self: center;
+    margin-top: 10px;
+    height: 60px;
+    border: none;
+}

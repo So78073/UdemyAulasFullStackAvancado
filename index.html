@@ -5,159 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>base teste Curso</title>
-    <link rel="stylesheet" href="/CursoPart1/styles.css">
-    <link rel="stylesheet" href="/CursoPart1/styleAulas.css">
-    <style>
-        body {
-            display: flex;
-            margin: 0ppx;
-            flex-direction: column;
-        }
-        
-        .daddy {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: flex-start;
-            padding: 20px;
-        }
-        
-        .aula {
-            display: flex;
-            flex-direction: column;
-            background-color: rgb(240, 240, 240);
-            border-radius: 10px;
-            margin: 5px;
-            width: 350px;
-            height: 500px;
-        }
-        
-        .aula:hover {
-            scale: 1.01;
-        }
-        
-        .DefinitionDivAula001 {
-            display: flex;
-            border-radius: 10px;
-            margin: 5px;
-            width: 300px;
-            height: 500px;
-        }
-        
-        .divSmallDefinitions {
-            display: flex;
-            border-radius: 10px;
-            margin: 5px;
-            width: 710px;
-        }
-        
-        .smallDivLeft {
-            display: flex;
-            width: 100%;
-            border-radius: 10px;
-            height: 150px;
-            flex-direction: column;
-        }
-        
-        .smallDivRight {
-            display: flex;
-            width: 100%;
-            height: 150px;
-            border-radius: 10px;
-            flex-direction: column;
-        }
-        
-        .input {
-            min-height: 25px;
-            margin-top: 5px;
-            width: 90%;
-            align-self: center;
-            padding: 0px;
-            border: none;
-            text-indent: 10px;
-        }
-        
-        .bt {
-            width: 90%;
-            height: 30px;
-            margin-top: 10px;
-            border-radius: 5px;
-            border-color: rgba(26, 26, 26, 0.253);
-            align-self: center;
-        }
-        
-        .Pflex {
-            width: 80%;
-            height: 100%;
-            overflow-y: auto;
-            padding: 10px;
-            border-radius: 5px;
-            text-align: start;
-            margin-top: 5px;
-            border: 1px solid #ccc;
-            align-self: center;
-            margin-bottom: 20px;
-            border-radius: 10px;
-        }
-        
-        .imgUdemy {
-            width: 25%;
-            align-self: center;
-        }
-        
-        p {
-            text-align: start;
-            width: 91%;
-            white-space: pre-line;
-            margin-left: 15px;
-        }
-        
-        h1 {
-            width: 91%;
-            align-self: center;
-            margin: 0px;
-            margin-top: 10px;
-        }
-        
-        h2 {
-            width: 91%;
-            align-self: center;
-        }
-        
-        .forInput {
-            display: flex;
-            flex-direction: column;
-            margin-left: 15px;
-            padding: 5px;
-        }
-        
-        .forInput input {
-            align-self: flex-start;
-        }
-        
-        .forInput button {
-            align-self: flex-start;
-        }
-        
-        .respClass {
-            margin-left: 20px;
-            margin-top: 20px;
-        }
-        
-        .checkBox {
-            margin: 0px;
-            padding: 0px;
-            align-self: center;
-            margin-right: 10px;
-        }
-    </style>
+    <link rel="stylesheet" href="/CursoPart1/style.css">
+
+
 </head>
 
 <body>
 
 
-    <img src="/assets/Udemy_logo.svg.png" class="imgUdemy" alt="Imagem udemy">
-    <button class="bt" style="margin-top: 25px;" onclick="testBackLog()">test button</button>
+    <img src="/assets/Udemy_logo.svg.png" class="imgUdemy" alt="Imagem udemy" style="margin-top: 100px;">
+    <button class="btTest" style="margin-top: 25px;" onclick="testBackLog()">test button</button>
 
 
 
@@ -405,6 +262,124 @@
             <p style="margin-top: 70px;">Este exercício traz uma função que utiliza o switch, porém encontrei uma maneira 1001% mais eficaz e a apliquei aos meses do ano. Vale a pena dar uma olhada.</p>
         </div>
 
+        <div class="aula">
+            <h1>Aula 18</h1>
+            <h2>Atribuição via desestruturação 1</h2>
+
+            <p>Atribuição via desestruturação seria a atribuição de valores em variáveis obtidas de um array ou um objeto, por exemplo:<br><br>let nums = [10, 20, 30, 40]<br><br>[num1, num2, num3, num4] = nums<br><br>let guy = { nome: 'Pedrin', Sobrenome:
+                'Berranteiro' }<br><br>const { nome: nm = 'Pedro' } = guy<br><br>No caso da desestruturação, não precisamos nos preocupar com a quantidade de variáveis no array ou no objeto, pois se não houver novas variáveis o suficiente, a Engine pega
+                apenas o que dá.</p>
+        </div>
+
+        <div class="aula">
+            <h1>Aula 18</h1>
+            <h2>Atribuição via desestruturação 2</h2>
+            <div class="Pflex">
+                <p>Podemos trocar o nome das variáveis de um objeto quando as acessamos externamente. Por exemplo:
+
+                    <br>No objeto:
+
+                    <br>let guy = { nome: 'Pedrin', Sobrenome: 'Berranteiro', endereco: { rua: 'Rua da banana', n: 222 } };
+
+                    <br>Quando o acessamos:
+
+                    <br>const { endereco: end: { rua: Rua, n } } = guy;
+
+                    <br>console.log(rua, n);
+
+                    <br>Nesse exemplo, pegamos o endereço no objeto e filtramos o que queremos obter no objeto endereço, que está dentro do objeto guy. Para dar um nome diferente fora do objeto guy, usamos ":" para atribuir o novo nome.</p>
+            </div>
+        </div>
+
+        <div class="aula">
+            <h1>Aula 19</h1>
+            <h2>NodeList</h2>
+            <div class="HbuttonCfg">
+                <button class="bt" onclick="aula019('add')">add</button>
+                <button class="bt" onclick="aula019('del')">del</button>
+            </div>
+
+            <div id="quesAula019" style="margin-left: 20px; height: 100px; margin-top: 50px;">
+
+            </div>
+
+            <p>
+                Neste exercício, utilizamos o laço de repetição for para adicionar elementos à página usando o DOM (Document Object Model), aproveitando também o método ensinado na aula anterior (atribuição via desestruturação).
+            </p>
+
+        </div>
+
+        <div class="aula">
+            <h1>Aula 20</h1>
+            <h2>NodeList e getComputed</h2>
+
+            <div class="ParagrafosAula020">
+                <p>Este exercício utiliza o NodeList.</p>
+                <p>Este exercício utiliza funções getComputedStyle.</p>
+                <p>O objetivo dele é fazer cada parágrafo ficar da cor do fundo do body.</p>
+                <p>Porém, gosto de ir além!</p>
+            </div>
+
+            <div class="HbuttonCfg">
+                <button class="bt" onclick="aula020('quest')">Exec</button>
+                <button class="bt" onclick="aula020('cls')">Clear</button>
+            </div>
+            <div class="HbuttonCfg">
+                <input type="color" class="GetColor" id="colorAula020_1"><input type="color" class="GetColor" id="colorAula020_2">
+            </div>
+
+            <button class="bt" onclick="aula020('youColor')">Your Color</button>
+
+        </div>
+
+        <div class="aula">
+            <h1>Aula 21</h1>
+            <h2>Exercicio aulas 21</h2>
+
+            <div class="HbuttonCfg">
+                <input type="number" class="input" placeholder="wight" id="wightAula021" value="1980">
+                <input type="number" class="input" placeholder="heght" id="heightAula021" value="1080">
+            </div>
+            <button class="bt" onclick="aula021()">Enviar</button>
+            <p>Escolha o tamanho de largura (width) e altura (height) para verificar se a tela está em modo retrato ou paisagem.</p>
+            <P id="questAula021" class="respClass">RESPOSTA</P>
+
+        </div>
+
+        <div class="aula">
+            <h1>Aula 22</h1>
+            <h2>FizzBuzz</h2>
+            <p>Escolha um numero</p>
+
+            <input type="text" class="input" id="inputAula022">
+            <button class="bt" onclick="aula022('youN')">Send</button>
+            <p id="questAula022_1" class="respClass">RESPOSTA</p>
+
+            <button class="bt" onclick="aula022('range')">Em um range de 0 a 20</button>
+            <p id="questAula022_2" class="respClass">Fizz = 0<br>Buzz = 0<br>Nums:</p>
+
+        </div>
+
+        <div class="aula">
+            <h1>Mudanças</h1>
+            <p>Algumas coisas mudaram no front e no back:<br><br>- Agora temos um arquivo .js diferente do que executamos os scripts das aulas, podendo usar métodos mais avançados.<br><br>- As funções de clique não ficam mais no front, pois isso acaba sendo
+                inseguro para o site.<br><br>- Agora temos uma nova pasta chamada main2.js que será utilizada para os novos métodos. Também foi criado um arquivo functions.js que será usado como auxiliar para o mesmo.</p>
+        </div>
+
+        <div class="aula">
+            <h1>aula 023</h1>
+            <h2>Timer in SetInterval</h2>
+            <p>Crie um temporizador (00:00:00) que inclua funções como iniciar, pausar e zerar, utilizando ferramentas de CSS e aplicando os conhecimentos das aulas anteriores.</p>
+
+            <p style="text-align: center; font-size:30px;" id="hrAula023">00:00:00</p>
+            <div class="HbuttonCfg">
+                <button class="bt" id="inicAula023">iniciar</button>
+                <button class="bt" id="pausAula023">pausar</button>
+                <button class="bt" id="zeraAula023">zerar</button>
+            </div>
+        </div>
+
+
 
 
 
@@ -412,9 +387,10 @@
 
     </section>
 
-    <script src="CursoPart1/main.js"></script>
+    <script src="/scripts/main.js"></script>
     <script src="CursoPart1/preconfig.js"></script>
-    <script src="CursoPart1/mainTestScript.js"></script>
+    <script src="/CursoPart1/main2.js"></script>
+    <script src="CursoPart1/functions.js"></script>
 
 
 </body>
