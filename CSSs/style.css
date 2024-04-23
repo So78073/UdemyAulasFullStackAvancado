@@ -72,7 +72,7 @@ body {
 .bt,
 .btTest {
     width: 90%;
-    height: 40px;
+    min-height: 40px;
     margin-top: 10px;
     border-radius: 5px;
     border: 1px solid rgba(26, 26, 26, 0.253);
@@ -80,6 +80,20 @@ body {
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+.bt2 {
+    width: 20%;
+    border-radius: 5px;
+    border: 1px solid rgba(26, 26, 26, 0.253);
+    align-self: center;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-left: 2px;
+    margin-right: 2px;
 }
 
 .bt:hover,
@@ -108,7 +122,13 @@ body {
 
 .HbuttonCfg {
     display: flex;
-    width: 90%;
+    width: 92%;
+    align-self: center;
+}
+
+.HbuttonCfg2 {
+    display: flex;
+    width: 100%;
     align-self: center;
 }
 
@@ -119,18 +139,21 @@ body {
 
 p {
     text-align: start;
-    width: 95%;
+    width: 90%;
     white-space: pre-line;
-    margin-left: 10px;
+    margin-left: 20px;
     margin-bottom: 10px;
+    word-wrap: break-word;
 }
 
+a,
 h1,
 h2 {
     width: 95%;
     align-self: center;
     margin: 0;
-    margin-top: 10px;
+    margin-top: 20px;
+    margin-left: 20px;
 }
 
 .forInput {
@@ -163,4 +186,8 @@ h2 {
     margin-top: 10px;
     height: 60px;
     border: none;
+}
+
+.aula24div {
+    display: flex;
 }
