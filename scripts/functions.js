@@ -124,3 +124,29 @@ function saveAndaLoad() {
     DBaula024 = cache
 
 }
+
+
+
+// aula 29 ------------------------------------------------------------------------------
+
+
+
+function filterFunction(lNome, idd) {
+
+    const guys = [];
+
+    for (let i = 0; i <= 30; i++) {
+        guys.push(generatePeople())
+    }
+
+    const guysFilter = guys.filter(function (guy) {
+        return guy.nome.length >= lNome && guy.idade >= idd
+    })
+
+
+    document.getElementById('logAula026').innerText = `Pessoas encontradas: ${guysFilter.length}\n\n`
+    for (g of guysFilter) {
+        document.getElementById('logAula026').innerText += `Nome: ${g.nome} - Idade: ${g.idade}\n\n`
+    }
+
+}

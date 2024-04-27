@@ -1,4 +1,16 @@
-const snms = [
+
+const firtName = [
+    "Ana", "João","Mariana","Pedro","Carla","Lucas","Juliana",
+    "Rafael","Fernanda","Diego","Maria","Gustavo","Camila",
+    "Daniel","Isabela","Rodrigo","Amanda","Matheus","Laura",
+    "Bruno","Renata","Leonardo","Luiza","Guilherme","Natália",
+    "Felipe","Vanessa","Arthur","Larissa","Gabriel","Carolina",
+    "Eduardo","Lívia","Vinícius","Paula","Thiago","Helena","Alexandre",
+    "Cristina","Marcelo","Rosa","Fábio","Andréia","Roberto","Patrícia",
+    "Luciana","Renato","Tatiana","Ricardo"
+];
+
+const lastNames = [
     "Garcia", "Ramos", "Machado", "Ferreira", "Rocha",
     "Barros", "Nunes", "Correa", "Vieira", "Campos",
     "Farias", "Morais", "Castro", "Azevedo", "Dantas",
@@ -17,3 +29,9 @@ const snms = [
     "Diop", "Kim", "Lee", "Wong", "Chen", "Singh",
     "Wilson", "Taylor", "Anderson"
 ]
+
+
+
+function generatePeople() {
+    return {nome: firtName[Math.floor(Math.random() * firtName.length)], idade: Math.floor( Math.random() * 60)}
+}
